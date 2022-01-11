@@ -31,7 +31,7 @@ public class Terminal {
     public static void verifyTicket(Ticket ticket) {
 
         if (ticket.name == "" || ticket.name == null) {
-            System.out.println("!!!Проблема с Билетом!! В билете нет ФИО");
+            System.out.println("\u001B[31m" + "!!!Проблема с Билетом!! В билете нет ФИО" + "\u001B[0m");
             return;
         }
 
@@ -55,10 +55,10 @@ public class Terminal {
                 System.out.println("Пройти в сектор В3 можно через ворота слева");
                 break;
             case VIP:
-                System.out.println("Здравствуйте! " + ticket.name + "Пройти в VIP зал вы можете прямо по корридору");
+                System.out.println("Здравствуйте! " + ticket.name + " Пройти в VIP зал вы можете прямо по корридору");
                 break;
             default:
-                System.out.println("!!!Проблема с Билетом!! Сектор не с нашего стадиона");
+                System.out.println("\u001B[31m" + "!!!Проблема с Билетом!! Сектор не с нашего стадиона" + "\u001B[0m");
                 break;
 
         }
